@@ -1,26 +1,28 @@
 package com.example.demo.domain.model;
 
+import java.security.Timestamp;
+
 public class User {
 
-	private int staff_code;
+	private String staff_code;
 	private String last_name;
 	private String first_name;
 	private String last_name_romaji;
 	private String first_name_romaji;
-	private int staff_department;
+	private String staff_department;
 	private String project_type;
 	private String joined_year;
-	private String new_glad_flg;
+	private Boolean new_glad_flg;
 	private String created_by;
 	private String updated_by;
-	private String created_at;
-	private String updated_at;
+	private Timestamp created_at;
+	private Timestamp updated_at;
 
-	public int getStaff_code() {
+	public String getStaff_code() {
 		return staff_code;
 	}
 
-	public void setStaff_code(int staff_code) {
+	public void setStaff_code(String staff_code) {
 		this.staff_code = staff_code;
 	}
 
@@ -56,11 +58,11 @@ public class User {
 		this.first_name_romaji = first_name_romaji;
 	}
 
-	public int getStaff_department() {
+	public String getStaff_department() {
 		return staff_department;
 	}
 
-	public void setStaff_department(int staff_department) {
+	public void setStaff_department(String staff_department) {
 		this.staff_department = staff_department;
 	}
 
@@ -80,11 +82,11 @@ public class User {
 		this.joined_year = joined_year;
 	}
 
-	public String getNew_glad_flg() {
+	public Boolean getNew_glad_flg() {
 		return new_glad_flg;
 	}
 
-	public void setNew_glad_flg(String new_glad_flg) {
+	public void setNew_glad_flg(Boolean new_glad_flg) {
 		this.new_glad_flg = new_glad_flg;
 	}
 
@@ -104,19 +106,19 @@ public class User {
 		this.updated_by = updated_by;
 	}
 
-	public String getCreated_at() {
+	public Timestamp getCreated_at() {
 		return created_at;
 	}
 
-	public void setCreated_at(String created_at) {
+	public void setCreated_at(Timestamp created_at) {
 		this.created_at = created_at;
 	}
 
-	public String getUpdated_at() {
+	public Timestamp getUpdated_at() {
 		return updated_at;
 	}
 
-	public void setUpdated_at(String updated_at) {
+	public void setUpdated_at(Timestamp updated_at) {
 		this.updated_at = updated_at;
 	}
 
