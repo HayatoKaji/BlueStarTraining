@@ -13,10 +13,7 @@ public class User {
 	private String project_type;
 	private String joined_year;
 	private Boolean new_glad_flg;
-	private String created_by;
-	private String updated_by;
-	private Timestamp created_at;
-	private Timestamp updated_at;
+	
 
 	public String getStaff_code() {
 		return staff_code;
