@@ -52,6 +52,7 @@ public class TrainingController {
 		service.newStaff(form);
 		return "/result";
 	}
+	//DBへ反映
 
 	@RequestMapping(value = "/backStaff", method = RequestMethod.POST)
 	public String backStaffBtn() {
