@@ -9,13 +9,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.example.demo.domain.model.User;
-import com.example.demo.domain.service.TrainingService;
+import com.example.demo.domain.service.StaffappService;
 
 @Controller
-public class TrainingController {
+public class StaffappController {
 
 	@Autowired
-	TrainingService service;
+	StaffappService service;
 
 	@GetMapping("/home")
 	public String getHome() {
@@ -52,7 +52,7 @@ public class TrainingController {
 		service.newStaff(form);
 		return "/result";
 	}
-	//DBへ反映
+	// DBへ反映
 
 	@RequestMapping(value = "/backStaff", method = RequestMethod.POST)
 	public String backStaffBtn() {
