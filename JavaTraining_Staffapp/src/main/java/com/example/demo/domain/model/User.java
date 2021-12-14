@@ -1,122 +1,87 @@
 package com.example.demo.domain.model;
 
-import java.security.Timestamp;
-
 public class User {
 
-	private String staff_code;
-	private String last_name;
-	private String first_name;
-	private String last_name_romaji;
-	private String first_name_romaji;
-	private String staff_department;
-	private String project_type;
-	private String joined_year;
-	private Boolean new_glad_flg;
-	
+	private String staffCode;
+	private String lastName;
+	private String firstName;
+	private String lastNameRomaji;
+	private String firstNameRomaji;
+	private String staffDepartment;
+	private String projectType;
+	private String joinedYear;
+	private Boolean newGladFlg;
 
-	public String getStaff_code() {
-		return staff_code;
+	public String getstaffCode() {
+		return staffCode;
 	}
 
-	public void setStaff_code(String staff_code) {
-		this.staff_code = staff_code;
+	public void setstaffCode(String staffCode) {
+		this.staffCode = staffCode;
 	}
 
-	public String getLast_name() {
-		return last_name;
+	public String getlastName() {
+		return lastName;
 	}
 
-	public void setLast_name(String last_name) {
-		this.last_name = last_name;
+	public void setlastName(String lastName) {
+		this.lastName = lastName;
 	}
 
-	public String getFirst_name() {
-		return first_name;
+	public String getfirstName() {
+		return firstName;
 	}
 
-	public void setFirst_name(String first_name) {
-		this.first_name = first_name;
+	public void setfirstName(String firstName) {
+		this.firstName = firstName;
 	}
 
-	public String getLast_name_romaji() {
-		return last_name_romaji;
+	public String getlastNameRomaji() {
+		return lastNameRomaji;
 	}
 
-	public void setLast_name_romaji(String last_name_romaji) {
-		this.last_name_romaji = last_name_romaji;
+	public void setlastNameRomaji(String lastNameRomaji) {
+		this.lastNameRomaji = lastNameRomaji;
 	}
 
-	public String getFirst_name_romaji() {
-		return first_name_romaji;
+	public String getfirstNameRomaji() {
+		return firstNameRomaji;
 	}
 
-	public void setFirst_name_romaji(String first_name_romaji) {
-		this.first_name_romaji = first_name_romaji;
+	public void setfirstNameRomaji(String firstNameRomaji) {
+		this.firstNameRomaji = firstNameRomaji;
 	}
 
-	public String getStaff_department() {
-		return staff_department;
+	public String getstaffDepartment() {
+		return staffDepartment;
 	}
 
-	public void setStaff_department(String staff_department) {
-		this.staff_department = staff_department;
+	public void setstaffDepartment(String staffDepartment) {
+		this.staffDepartment = staffDepartment;
 	}
 
-	public String getProject_type() {
-		return project_type;
+	public String getprojectType() {
+		return projectType;
 	}
 
-	public void setProject_type(String project_type) {
-		this.project_type = project_type;
+	public void setprojectType(String projectType) {
+		this.projectType = projectType;
 	}
 
-	public String getJoined_year() {
-		return joined_year;
+	public String getjoinedYear() {
+		return joinedYear;
 	}
 
-	public void setJoined_year(String joined_year) {
-		this.joined_year = joined_year;
+	public void setjoinedYear(String joinedYear) {
+		this.joinedYear = joinedYear;
 	}
 
-	public Boolean getNew_glad_flg() {
-		return new_glad_flg;
+	public Boolean getnewGladFlg() {
+		return newGladFlg;
 	}
 
-	public void setNew_glad_flg(Boolean new_glad_flg) {
-		this.new_glad_flg = new_glad_flg;
-	}
-
-	public String getCreated_by() {
-		return created_by;
-	}
-
-	public void setCreated_by(String created_by) {
-		this.created_by = created_by;
-	}
-
-	public String getUpdated_by() {
-		return updated_by;
-	}
-
-	public void setUpdated_by(String updated_by) {
-		this.updated_by = updated_by;
-	}
-
-	public Timestamp getCreated_at() {
-		return created_at;
-	}
-
-	public void setCreated_at(Timestamp created_at) {
-		this.created_at = created_at;
-	}
-
-	public Timestamp getUpdated_at() {
-		return updated_at;
-	}
-
-	public void setUpdated_at(Timestamp updated_at) {
-		this.updated_at = updated_at;
+	public void setnewGladFlg(Boolean newGladFlg) {
+		this.newGladFlg = newGladFlg;
 	}
 
 }
