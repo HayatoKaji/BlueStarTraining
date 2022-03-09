@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link th:href="@{/css/reset.css}" rel="stylesheet" type="text/css">
 <link th:href="@{/css/stylesheet.css}" rel="stylesheet" type="text/css">
+
 <title>top</title>
 </head>
 <body>
@@ -16,111 +17,15 @@
 					<input type="submit" value="管理画面へ" class="btn staffbtn">
 				</form>
 				<div class="subtitle">エンジニア</div>
-				<div class="homecontainer" th:if="${enjineerList ne null}">
-					<table>
-						<thead class="homeList">
-							<tr>
-								<th>No</th>
-								<th>姓　名</th>
-								<th>入社年月日</th>
-								<th>経歴</th>
-								<th>案件概要</th>
-							</tr>
-						</thead>
-						<tbody th:each="enjineer, stat :${enjineerList}">
-							<tr>
-								<td th:text="${stat.count}"></td>
-								<td th:text="${enjineer.lastName} + ' ' + ${enjineer.firstName}"></td>
-								<td th:text="${enjineer.joinedYear}"></td>
-								<td th:if="${enjineer.newGladFlg == 0}" th:text="新卒"></td>
-								<td th:if="${enjineer.newGladFlg == 1}" th:text="中途"></td>
-								<td th:switch="${enjineer.projectType}">
-									<th:block th:case=null th:text="ー"/>
-									<th:block th:case="''" th:text="ー"/>
-									<th:block th:case=*>
-										<th:block th:each="str, stat : ${enjineer.projectType.split('\r\n|\r|\n', -1)}">
-											<th:block th:text="${str}"/>
-											<br th:if="${!stat.last}"/>
-										</th:block>
-									</th:block>
-								</td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-				<div class="nullData" th:if="${enjineerList == null}">社員情報が存在しません。</div>
+				<div class="container"></div>
 			</div>
 			<div class="sales">
 				<div class="subtitle">営業</div>
-				<div class="homecontainer" th:if="${salesList ne null}">
-					<table>
-						<thead>
-							<tr>
-								<th>No</th>
-								<th>姓　名</th>
-								<th>入社年月日</th>
-								<th>経歴</th>
-								<th>案件概要</th>
-							</tr>
-						</thead>
-						<tbody th:each="sales, stat :${salesList}">
-							<tr>
-								<td th:text="${stat.count}"></td>
-								<td th:text="${sales.lastName} + ' ' + ${sales.firstName}"></td>
-								<td th:text="${sales.joinedYear}"></td>
-								<td th:if="${sales.newGladFlg == 0}" th:text="新卒"></td>
-								<td th:if="${sales.newGladFlg == 1}" th:text="中途"></td>
-								<td th:switch="${sales.projectType}">
-									<th:block th:case=null th:text="ー"/>
-									<th:block th:case="''" th:text="ー"/>
-									<th:block th:case=*>
-										<th:block th:each="str, stat : ${sales.projectType.split('\r\n|\r|\n', -1)}">
-											<th:block th:text="${str}"/>
-											<br th:if="${!stat.last}"/>
-										</th:block>
-									</th:block>
-								</td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-				<div class="nullData" th:if="${salesList == null}">社員情報が存在しません。</div>
+				<div class="container"></div>
 			</div>
 			<div class="corporate">
 				<div class="subtitle">コーポレート</div>
-				<div class="homecontainer" th:if="${corporationList ne null}">
-					<table>
-						<thead>
-							<tr>
-								<th>No</th>
-								<th>姓　名</th>
-								<th>入社年月日</th>
-								<th>経歴</th>
-								<th>案件概要</th>
-							</tr>
-						</thead>
-						<tbody th:each="corporation, stat :${corporationList}">
-							<tr>
-								<td th:text="${stat.count}"></td>
-								<td th:text="${corporation.lastName} + ' ' + ${corporation.firstName}"></td>
-								<td th:text="${corporation.joinedYear}"></td>
-								<td th:if="${corporation.newGladFlg == 0}" th:text="新卒"></td>
-								<td th:if="${corporation.newGladFlg == 1}" th:text="中途"></td>
-								<td th:switch="${corporation.projectType}">
-									<th:block th:case=null th:text="ー"/>
-									<th:block th:case="''" th:text="ー"/>
-									<th:block th:case=*>
-										<th:block th:each="str, stat : ${corporation.projectType.split('\r\n|\r|\n', -1)}">
-											<th:block th:text="${str}"/>
-											<br th:if="${!stat.last}"/>
-										</th:block>
-									</th:block>
-								</td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-				<div class="nullData" th:if="${corporationList == null}">社員情報が存在しません。</div>
+				<div class="container"></div>
 			</div>
 		</div>
 	</div>

@@ -43,9 +43,9 @@
 								所属(<span>※</span>): <select name="staffDepartment" id=""
 									class="formbox">
 									<option value="">-------</option>
-									<option value="0001">エンジニア</option>
-									<option value="0002" id=0002>営業</option>
-									<option value="0003" id=0003>コーポレート</option>
+									<option value="engineer">エンジニア</option>
+									<option value="sales">営業</option>
+									<option value="corporate">コーポレート</option>
 								</select>
 							</div>
 							<div>
@@ -55,8 +55,8 @@
 							<div>
 								経歴(<span>※</span>):
 								<div class="radiobox">
-									<input type="radio" name="newGladFlg" value="0" checked>新卒
-									<input type="radio" name="newGladFlg" value="1">中途
+									<input type="radio" name="newGladFlg" value="新卒" checked>新卒
+									<input type="radio" name="newGladFlg" value="中途">中途
 								</div>
 							</div>
 							<div>
@@ -66,8 +66,8 @@
 							</div>
 						</div>
 						<div>
-							<input type="button" onclick="submit();" value="登録" class="btn"> 
-							<input type="button" onclick="history.back()" value="戻る" class="btn">
+							<input type="submit" value="登録" class="btn"> <input
+								type="button" onclick="history.back()" value="戻る" class="btn">
 						</div>
 					</form>
 				</div>
