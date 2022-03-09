@@ -2,6 +2,7 @@ package com.example.demo.domain.model;
 
 public class User {
 
+	private long id;
 	private String staffCode;
 	private String lastName;
 	private String firstName;
@@ -10,77 +11,85 @@ public class User {
 	private String staffDepartment;
 	private String projectType;
 	private String joinedYear;
-	private Boolean newGladFlg;
+	private Integer newGladFlg;
 
-	public String getstaffCode() {
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
+	public String getStaffCode() {
 		return staffCode;
 	}
 
-	public void setstaffCode(String staffCode) {
+	public void setStaffCode(String staffCode) {
 		this.staffCode = staffCode;
 	}
 
-	public String getlastName() {
+	public String getLastName() {
 		return lastName;
 	}
 
-	public void setlastName(String lastName) {
+	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
 
-	public String getfirstName() {
+	public String getFirstName() {
 		return firstName;
 	}
 
-	public void setfirstName(String firstName) {
+	public void setFirstName(String firstName) {
 		this.firstName = firstName;
 	}
 
-	public String getlastNameRomaji() {
+	public String getLastNameRomaji() {
 		return lastNameRomaji;
 	}
 
-	public void setlastNameRomaji(String lastNameRomaji) {
+	public void setLastNameRomaji(String lastNameRomaji) {
 		this.lastNameRomaji = lastNameRomaji;
 	}
 
-	public String getfirstNameRomaji() {
+	public String getFirstNameRomaji() {
 		return firstNameRomaji;
 	}
 
-	public void setfirstNameRomaji(String firstNameRomaji) {
+	public void setFirstNameRomaji(String firstNameRomaji) {
 		this.firstNameRomaji = firstNameRomaji;
 	}
 
-	public String getstaffDepartment() {
+	public String getStaffDepartment() {
 		return staffDepartment;
 	}
 
-	public void setstaffDepartment(String staffDepartment) {
+	public void setStaffDepartment(String staffDepartment) {
 		this.staffDepartment = staffDepartment;
 	}
 
-	public String getprojectType() {
+	public String getProjectType() {
 		return projectType;
 	}
 
-	public void setprojectType(String projectType) {
+	public void setProjectType(String projectType) {
 		this.projectType = projectType;
 	}
 
-	public String getjoinedYear() {
+	public String getJoinedYear() {
 		return joinedYear;
 	}
 
-	public void setjoinedYear(String joinedYear) {
+	public void setJoinedYear(String joinedYear) {
 		this.joinedYear = joinedYear;
 	}
 
-	public Boolean getnewGladFlg() {
+	public Integer getNewGladFlg() {
 		return newGladFlg;
 	}
 
-	public void setnewGladFlg(Boolean newGladFlg) {
+	public void setNewGladFlg(Integer newGladFlg) {
 		this.newGladFlg = newGladFlg;
 	}
 
