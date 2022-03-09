@@ -2,6 +2,98 @@ body {
 	margin: 60px 160px;
 }
 
+table {
+	table-layout: fixed;
+  	width: 100%;
+  	border-collapse: collapse;
+	border: 1px solid;
+	font-size: 15px;
+}
+
+th,td{
+	table-layout: fixed;
+  	width: 100%;
+  	border-collapse: collapse;
+  	border: 1px solid;
+   	text-align: center;
+   	padding: 10px;
+   	font-weight: normal;
+   	vertical-align: middle;
+   	
+}
+
+.homeList,th:nth-child(1) {
+  	width: 10%;
+}
+
+.homeList,th:nth-child(2) {
+ 	 width: 25%;
+}
+
+.homeList,th:nth-child(3) {
+  	width: 20%;
+}
+
+.homeList,th:nth-child(4) {
+  	width: 15%;
+}
+
+.homeList,th:nth-child(5) {
+  	width: 30%;
+}
+
+.editList,th:nth-child(1) {
+  	width: 10%;
+}
+
+.editList,th:nth-child(2) {
+  	width: 14%;
+}
+
+.editList,th:nth-child(3) {
+  	width: 20%;
+}
+
+.editList,th:nth-child(4) {
+  	width: 20%;
+}
+.editList,th:nth-child(5) {
+  	width: 12%;
+}
+
+.editList,th:nth-child(6) {
+  	width: 12%;
+}
+
+.editList,th:nth-child(7) {
+  	width: 12%;
+}
+
+.editList,td:nth-child(6) {
+  	width: 12%;
+  	padding: 2px 0;
+}
+
+.editList,td:nth-child(7) {
+  	width: 12%;
+    padding: 2px 0;
+}
+
+.nullData {
+	font-size: 30px;
+	margin: 20px;
+}
+
+.homecontainer {
+	padding: 30px 10px;
+}
+
+.container {
+	margin: 15px 0;
+	padding: 10px 30px 60px 20px;
+	border: solid #d3d3d3 0.5px;
+}
+
 .wrapper {
 	margin-left: 20px;
 	border: solid #d3d3d3 0.5px;
@@ -16,16 +108,24 @@ body {
 	border: solid 0.5px transparent;
 }
 
-.staffbtn {
-	position: absolute;
-	top: 0;
-	right: 0;
+.newform {
+	border: solid 1px #d3d3d3;
+	font-size: 15px;
+	margin-top: 20px;
+	padding: 20px 20px 60px;
 }
 
-.newbtn {
-	position: absolute;
-	top: 5px;
-	right: 0;
+.form-container {
+	text-align: right;
+	padding: 5px 350px 5px 0;
+}
+
+.formbox {
+	width: 250px;
+	border: 1px solid;
+	margin: 5px;
+	padding: 5px 0;
+	text-align: left;
 }
 
 .toptitle {
@@ -49,24 +149,26 @@ body {
 	margin-right: 30px;
 }
 
-.newform {
-	border: solid 1px #d3d3d3;
-	font-size: 15px;
-	margin-top: 20px;
-	padding: 20px 20px 60px;
+.staffbtn {
+	position: absolute;
+	top: 0;
+	right: 0;
 }
 
-.form-container {
-	text-align: right;
-	padding: 5px 350px 5px 0;
+.newbtn {
+	position: absolute;
+	top: 5px;
+	right: 0;
 }
-/*右揃えの中央配置方法を質問する*/
-.formbox {
-	width: 250px;
-	border: 1px solid;
-	margin: 5px;
-	padding: 5px 0;
-	text-align: left;
+
+.backbtn {
+	margin-top: 25px;
+}
+
+.uptatebtn,.deletebtn {
+	border: solid 1px;
+	border-radius: 5px;
+	padding: 5px 20px;
 }
 
 .radiobox {

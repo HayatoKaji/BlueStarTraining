@@ -5,43 +5,45 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link th:href="@{/css/reset.css}" rel="stylesheet" type="text/css">
 <link th:href="@{/css/stylesheet.css}" rel="stylesheet" type="text/css">
-<title>new</title>
+<title>update</title>
 </head>
 <body>
 	<div id="newPage">
-		<div class="toptitle">社員情報新規登録</div>
+		<div class="toptitle">社員情報更新</div>
 		<div class="staffwrapper">
 			<div class="info">
 				<div class="subtitle">社員情報</div>
 				<div class="newform">
-					<form action="/new/insert" method="post">
+					<form action="/update" th:object="${user}" method="post">
 						<div>
 							(<span>＊</span>)がついている項目は入力必須項目です。
 						</div>
 						<div class="form-container">
 							<div>
-								社員コード(<span>※</span>): <input type="text" class="formbox"
-									name="staffCode" id="id">
+								社員コード(<span>※</span>): 
+								<input type="text" class="formbox"
+									name="staffCode" th:field="*{staffCode}">
+								<input type="hidden" name="beforeStaffCode" th:value ="${staffCode}">
 							</div>
 							<div>
 								姓(<span>※</span>): <input type="text" class="formbox"
-									name="lastName">
+									name="lastName" th:field="*{lastName}">
 							</div>
 							<div>
 								名(<span>※</span>): <input type="text" class="formbox"
-									name="firstName">
+									name="firstName" th:field="*{firstName}">
 							</div>
 							<div>
 								姓 ローマ字(<span>※</span>): <input type="text" class="formbox"
-									name="lastNameRomaji">
+									name="lastNameRomaji" th:field="*{lastNameRomaji}">
 							</div>
 							<div>
 								名 ローマ字(<span>※</span>): <input type="text" class="formbox"
-									name="firstNameRomaji">
+									name="firstNameRomaji" th:field="*{firstNameRomaji}">
 							</div>
 							<div>
 								所属(<span>※</span>): <select name="staffDepartment" id=""
-									class="formbox">
+									class="formbox" th:field="*{staffDepartment}">
 									<option value="">-------</option>
 									<option value="0001">エンジニア</option>
 									<option value="0002" id=0002>営業</option>
@@ -50,23 +52,30 @@
 							</div>
 							<div>
 								入社年月日(<span>※</span>): <input type="text"
-									placeholder="yyyy/MM/dd" class="formbox" name="joinedYear">
+									placeholder="yyyy/MM/dd" class="formbox" name="joinedYear" th:field="*{joinedYear}">
 							</div>
 							<div>
 								経歴(<span>※</span>):
 								<div class="radiobox">
-									<input type="radio" name="newGladFlg" value="0" checked>新卒
-									<input type="radio" name="newGladFlg" value="1">中途
+									<input type="radio" name="newGladFlg" value="0" th:field="*{newGladFlg}">新卒
+									<input type="radio" name="newGladFlg" value="1" th:field="*{newGladFlg}">中途
 								</div>
 							</div>
 							<div>
 								案件概要/業務内容:
 								<textarea name="projectType" id="" cols="30" rows="5"
-									class="formbox"></textarea>
+									class="formbox" th:field="*{projectType}">
+									<th:block th:if="${sentence}">
+										<th:block th:each="str, stat : ${sentence.split('\r\n|\r|\n', -1)}">
+										<th:block th:text="${str}"/>
+										<br th:if="${!stat.last}"/>
+										</th:block>
+									</th:block>
+								</textarea>
 							</div>
 						</div>
 						<div>
-							<input type="button" onclick="submit();" value="登録" class="btn"> 
+							<input type="button" onclick="submit();" value="更新" class="btn"> 
 							<input type="button" onclick="history.back()" value="戻る" class="btn">
 						</div>
 					</form>
