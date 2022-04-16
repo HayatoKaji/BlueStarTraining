@@ -9,19 +9,13 @@
 </head>
 <body>
 	<div id="resultPage">
-		<div th:switch="${url}">
-			<div th:case="newstaff">
+		<div>
+			
+			<div>
 				<div class="toptitle">登録結果</div>
 				<div>社員情報の登録に成功しました。</div>
 			</div>
-			<div th:case="update">
-				<div class="toptitle">更新結果</div>
-				<div>社員情報の更新に成功しました。</div>
-			</div>
-			<div th:case="delete">
-				<div class="toptitle">削除結果</div>
-				<div>社員情報の削除に成功しました。</div>
-			</div>
+			
 		</div>
 	</div>
 		<div>

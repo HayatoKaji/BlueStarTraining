@@ -37,19 +37,19 @@ public class StaffappController {
 	}
 	// homeを表示
 
-	@GetMapping("/staff")
+	@GetMapping("/stafflist")
 	public String getStaff(Model model) {
 		List<User> staffList = service.findAll();
 		model.addAttribute("staffList", staffList);
-		return "/staffedit";
+		return "/staffList";
 	}
 	// staffeditを表示(検索時）
 
-	@RequestMapping(value = "/staff", method = RequestMethod.POST)
+	@RequestMapping(value = "/stafflist", method = RequestMethod.POST)
 	public String editBtn(Model model) {
 		List<User> staffList = service.findAll();
 		model.addAttribute("staffList", staffList);
-		return "/staffedit";
+		return "/staffList";
 	}
 	// staffeditに遷移
 
@@ -64,7 +64,7 @@ public class StaffappController {
 	@RequestMapping(path = "/update", method = RequestMethod.POST)
 	public String updateBtn(Model model, User user, @RequestParam String beforeStaffCode) {
 		service.updateStaff(beforeStaffCode, user);
-		return "/result";
+		return "/result3";
 	}
 	// sql文を用いてupdateする
 
@@ -79,7 +79,7 @@ public class StaffappController {
 	@RequestMapping(path = "/delete", method = RequestMethod.POST)
 	public String deleteBtn(Model model, User user, @RequestParam String staffCode) {
 		service.deleteStaff(staffCode, user);
-		return "/result";
+		return "/result2";
 	}
 	// sql文を用いてdeleteする
 
