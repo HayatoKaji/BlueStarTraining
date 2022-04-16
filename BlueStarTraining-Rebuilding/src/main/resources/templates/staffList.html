@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="jp" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link th:href="@{/css/reset.css}" rel="stylesheet" type="text/css">
+<link th:href="@{/css/stylesheet.css}" rel="stylesheet" type="text/css">
+<title>staffEditPage</title>
+</head>
+<body>
+	<div id="editPage">
+		<div class="toptitle">社員情報管理</div>
+		<div class="staffwrapper">
+			<div class="employee">
+				<form method="post" action="/new">
+					<input type="submit" value="新規登録" class="btn newbtn">
+				</form>
+				<div class="subtitle">社員情報</div>
+				<div class="container">
+					<table th:if="${staffList ne null}">
+						<thead class="editList">
+							<tr>
+								<th>id</th>
+								<th>社員コード</th>
+								<th>姓名</th>
+								<th>姓 名 ローマ字</th>
+								<th>入社年月日</th>
+								<th>編集</th>
+								<th>削除</th>
+							</tr>
+						</thead>
+						<tbody th:each="staff, stat :${staffList}" class="editList">
+							<tr>
+								<td th:text="${stat.count}"></td>
+								<td th:text="${staff.staffCode}"></td>
+								<td th:text="${staff.lastName} + ' ' + ${staff.firstName}"></td>
+								<td th:text="${staff.lastNameRomaji} + ' ' + ${staff.firstNameRomaji}"></td>
+								<td th:text="${staff.joinedYear}"></td>
+								<td class="">
+									<form th:action="@{'/edit/' + ${staff.staffCode}}" method="get">
+										<input type="submit" value="更新" class="uptatebtn">
+									</form>
+								</td>
+								<td>
+									<form th:action="@{'/delete/' + ${staff.staffCode}}" method="get">
+										<input type="submit" value="削除" class="deletebtn">
+									</form>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="nullData" th:if="${staffList == null}">社員情報が存在しません。</div>
+					<div class="backbtn">
+						<form method="post" action="/backHome">
+							<input type="submit" value="戻る" class="btn">
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
